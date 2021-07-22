@@ -32,7 +32,7 @@ jobs:
           CACHIER_TEST_USERNAME: ${{ secrets.CACHIER_TEST_USERNAME  }}
           CACHIER_TEST_PASSWORD: ${{ secrets.CACHIER_TEST_PASSWORD  }}
         run: |
-          pytest
+          pytest tests/test_pickle_core.py
       - name: "Upload coverage to Codecov"
         uses: codecov/codecov-action@v1
         with:
